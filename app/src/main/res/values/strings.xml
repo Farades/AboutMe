@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AboutMe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="first_name">Артем</string>
+    <string name="last_name">Мацепура</string>
+    <string name="email">creg2007@gmail.com</string>
+    <string name="phone">+7 (926) 979&#8211;19&#8211;56</string>
+    <string name="vk_link">http://vk.com/matsepura</string>
+
+    <string-array name="professional_skills">
+        <item>C</item>
+        <item>C++</item>
+        <item>Ruby/RoR</item>
+        <item>PHP</item>
+        <item>HTML/CSS</item>
+        <item>Linux</item>
+        <item>Java</item>
+    </string-array>
+
+    <string-array name="hobby">
+        <item>IT</item>
+        <item>Программирование</item>
+        <item>Спорт</item>
+        <item>Умный дом</item>
+    </string-array>
+
+</resources>
