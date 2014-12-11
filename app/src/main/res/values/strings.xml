@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">AboutMe</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
     <string name="first_name">Артем</string>
@@ -26,6 +25,9 @@
         <item>Программирование</item>
         <item>Спорт</item>
         <item>Умный дом</item>
+        <item>Техника</item>
+        <item>Гаджеты</item>
+        <item>Технологии</item>
     </string-array>
 
 </resources>
