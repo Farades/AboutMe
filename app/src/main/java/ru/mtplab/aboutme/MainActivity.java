@@ -75,6 +75,10 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
 
+        if (id == R.id.menu_copy) {
+            nameText.setText("Тест");
+        }
+
         return super.onOptionsItemSelected(item);
     }
 }
