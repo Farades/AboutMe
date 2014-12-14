@@ -4,4 +4,8 @@
 
     <item android:id="@+id/menu_copy" android:title="Копировать"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/menu_copy_name" android:title="Копировать Имя"
+        android:orderInCategory="200" app:showAsAction="never" />
+    <item android:id="@+id/menu_copy_email" android:title="Копировать email"
+        android:orderInCategory="300" app:showAsAction="never" />
 </menu>
