@@ -3,23 +3,24 @@
 
     <string name="app_name">AboutMe</string>
     <string name="action_settings">Settings</string>
-
     <string name="first_name">Артем</string>
     <string name="last_name">Мацепура</string>
-    <string name="email">creg2007@gmail.com</string>
-    <string name="phone">+7 (926) 979&#8211;19&#8211;56</string>
+    <string name="email">ar.matsepura@gmail.com</string>
+    <string name="phone">+7 (926) 979–19–56</string>
     <string name="vk_link">http://vk.com/matsepura</string>
+    <string name="vk_text">matsepura</string>
 
     <string-array name="professional_skills">
+        <item>Java</item>
+        <item>Android</item>
+        <item>Algorithms</item>
         <item>C</item>
         <item>C++</item>
         <item>Ruby/RoR</item>
         <item>PHP</item>
         <item>HTML/CSS</item>
         <item>Linux</item>
-        <item>Java</item>
     </string-array>
-
     <string-array name="hobby">
         <item>IT</item>
         <item>Программирование</item>
@@ -29,5 +30,9 @@
         <item>Гаджеты</item>
         <item>Технологии</item>
     </string-array>
+
+    <string name="title_activity_about">О себе</string>
+    <string name="about_page">Тестовые данные. Тут страница "о себе" и много другого интересного.
+        Также рыбный текст всегда был правильным способом наполнения тестовой страницы.</string>
 
 </resources>

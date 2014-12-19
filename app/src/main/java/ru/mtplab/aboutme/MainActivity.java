@@ -4,14 +4,21 @@ import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Paint;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.util.Linkify;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -22,9 +29,11 @@ public class MainActivity extends ActionBarActivity {
     private ListView hobbyList;
     private TextView phoneText;
     private TextView emailText;
+    private TextView socialText;
     private String name;
     private String phone;
     private String email;
+    private String vk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +47,23 @@ public class MainActivity extends ActionBarActivity {
         phoneText = (TextView)findViewById(R.id.phone);
         phone = getString(R.string.phone);
         phoneText.append(phone);
+        Linkify.addLinks(phoneText, Linkify.ALL);
 
         emailText = (TextView)findViewById(R.id.email);
         email = getString(R.string.email);
         emailText.append(email);
+        Linkify.addLinks(emailText, Linkify.ALL);
+
+        socialText = (TextView)findViewById(R.id.social);
+        vk = getString(R.string.vk_text);
+        socialText.append(vk);
+        socialText.setPaintFlags(socialText.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
+        socialText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.vk_link))));
+            }
+        });
 
         avatarImage = (ImageView)findViewById(R.id.imageView1);
         avatarImage.setImageResource(R.drawable.avatar);
@@ -88,6 +110,17 @@ public class MainActivity extends ActionBarActivity {
             String copyText = "Email: " + getString(R.string.email);
             saveToClipboard(copyText);
             showDialog("Копирование email", "Email скопирован в буфер обмена.");
+        } else if (id == R.id.menu_about) {
+            Intent intent = new Intent(this, AboutActivity.class);
+            this.startActivity(intent);
+        } else if (id == R.id.menu_sms) {
+            String sendText = "ФИО: " + getString(R.string.last_name) + " " + getString(R.string.first_name) + "\n"
+                    + "Email: " + getString(R.string.email) + "\n"
+                    + "Телефон: " + getString(R.string.phone);
+            Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+            sendIntent.setData(Uri.parse("sms:"));
+            sendIntent.putExtra("sms_body", sendText);
+            startActivity(sendIntent);
         }
 
         return super.onOptionsItemSelected(item);

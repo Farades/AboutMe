@@ -8,4 +8,8 @@
         android:orderInCategory="200" app:showAsAction="never" />
     <item android:id="@+id/menu_copy_email" android:title="Копировать email"
         android:orderInCategory="300" app:showAsAction="never" />
+    <item android:id="@+id/menu_about" android:title="О себе"
+        android:orderInCategory="400" app:showAsAction="never" />
+    <item android:id="@+id/menu_sms" android:title="Отправить в SMS"
+        android:orderInCategory="500" app:showAsAction="never" />
 </menu>
